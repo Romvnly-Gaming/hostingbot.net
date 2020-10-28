@@ -5,7 +5,7 @@ Unofficial module for handling API request with hostingbot.net, meant to be opti
 ## Installation
 
 ```bash
-npm install hostingbot.net
+npm install hostingbot.net --save
 ```
 
 ## Usage

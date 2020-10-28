@@ -20,4 +20,4 @@ class HostingBot {
 
 
 
-  export default HostingBot;
+  module.exports = HostingBot;

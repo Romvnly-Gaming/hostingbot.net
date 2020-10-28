@@ -1,6 +1,6 @@
 const baseUrl = "https://node2.hostingbot.net:4083/index.php"
 
- const Hostingbot = {
+ const HostingBot = {
   VPS: class HostingBot {
     constructor() {
       this.name = 'HostingBot';

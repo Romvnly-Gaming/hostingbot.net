@@ -11,8 +11,8 @@ npm install hostingbot.net --save
 ## Usage
 
 ```js
-  const HostingBot= require("hostingbot.net"); // REQUIRE THE MODULE
-  const stats = new HostingBot.VPS({
+  const HostingBot = require("hostingbot.net"); // REQUIRE THE MODULE
+  const stats = new Hostingbot.VPS({
       apiKey: "", // API Key from hostingbot.net
       apiPass: "" // API pass from hostingbot.net
   }); 

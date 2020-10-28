@@ -1,0 +1,27 @@
+{
+  "name": "hostingbot.net",
+  "version": "1.0.0",
+  "description": "Unofficial module for handling API request with hostingbot.net, meant to be optimized for hostingbot.net using virtualizor.",
+  "main": "hostingbot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Romvnly-Gaming/hostingbot.net.git"
+  },
+  "keywords": [
+    "hostingbot.net",
+    "hostingbot",
+    "api",
+    "wrapper",
+    "hostingbot.net api",
+    "hostingbot.net wrapper"
+  ],
+  "author": "Romvnly#5369",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Romvnly-Gaming/hostingbot.net/issues"
+  },
+  "homepage": "https://github.com/Romvnly-Gaming/hostingbot.net#readme"
+}

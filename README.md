@@ -1,4 +1,4 @@
-[![HostingBot Logo](https://github.com/Romvnly-Gaming/hostingbot.net/blob/main/hostingbot.png)](https://clients.hostingbot.net/aff.php?aff=8)
+[![HostingBot Logo](https://github.com/Romvnly-Gaming/hostingbot.net/blob/main/images/hostingbot.png)](https://clients.hostingbot.net/aff.php?aff=8)
 # HostingBot.net API Wrapper
 
 ## Installation
@@ -22,7 +22,7 @@ const credentials = { // Don't be like me, have these values in a protected file
       apiPass: "hostingbot-apiPass", // API pass from hostingbot.net
       svs: 69 // Secure Virtual Server ID from hostingbot.net
 };
-const VPS = new HostingBot.VPS(credentials);  
+const VPS = new HostingBot.VPS(credentials); // Used for general VPS Actions.
 const Statistics = VPS.getBandwidth(); // Returns a promise object
 console.log(Statistics); 
 // {
@@ -38,6 +38,16 @@ console.log(Statistics);
 //     mth_txt: '20 Oct 2020\n19 Nov 2020',
 //     days: '31'
 //   }
+// }
+const Account = new HostingBot.Account(credentials); // Used for general account actions. 
+const myAccount = Account.fetch(); // Fetches directly from the HostingBot API due to a acceptable speed. 
+console.log(myAccount)
+// {
+//    "fname":"Romvnly",
+//    "lname":"Gaming",
+//    "language":"english",
+//    "email":"romvnlybusiness@gmail.com",
+//    "uid":"24"
 // }
 ```
 ## Get API Information

@@ -10,10 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/Romvnly-Gaming/hostingbot.net.git"
   },
-  "funding": {
-    "type" : "individual",
-    "url" : "https://paypal.me/romvnly/10"
-  },
   "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "keywords": [
     "hostingbot.net",

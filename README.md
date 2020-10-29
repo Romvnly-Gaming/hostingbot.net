@@ -22,8 +22,22 @@ const VPS = new HostingBot.VPS({
       apiPass: client.config["hostingbot-apiPass"], // API pass from hostingbot.net
       svs: 56 // Secure Virtual Server ID from hostingbot.net
   });  // Class with functions.
-const Statistics = VPS.getBandwidth() // Returns a promise object
-console.log(Statistics)
+const Statistics = VPS.getBandwidth(); // Returns a promise object
+console.log(Statistics); 
+// {
+//   bandwidth: {
+//     limit: 4000,
+//     used: 23.14,
+//     bytesLimit: 4096000,
+//     bytesUsed: 23699.31
+//   },
+//   month: {
+//     yr: '2020',
+//     month: '10',
+//     mth_txt: '20 Oct 2020\n19 Nov 2020',
+//     days: '31'
+//   }
+// }
 ```
 ## Get API Information
 

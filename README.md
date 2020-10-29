@@ -28,9 +28,7 @@ console.log(Statistics);
 // {
 //   bandwidth: {
 //     limit: 4000,
-//     used: 23.14,
-//     bytesLimit: 4096000,
-//     bytesUsed: 23699.31
+//     used: 23.14
 //   },
 //   month: {
 //     yr: '2020',
@@ -47,7 +45,7 @@ console.log(myAccount)
 //    "lname":"Gaming",
 //    "language":"english",
 //    "email":"romvnlybusiness@gmail.com",
-//    "uid":"24"
+//    "uid":24
 // }
 ```
 ## Get API Information

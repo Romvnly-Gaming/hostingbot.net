@@ -6,7 +6,6 @@ class Client {
     constructor(args) {
             //Make sure those fuckers give the constructor args.
             if (!args) throw new Error("No arguments provided. Please make sure you're following the tutorial.");
-            console.log(args[0])
             if (!args.apiKey) throw new Error("No API Key provided. Make sure it is a String.");
              if (!args.apiPass) throw new Error("No API Pass provided. Make sure it is a String.");
              if (typeof args.apiKey !== "string") throw new TypeError(`Got a ${typeof args.apiKey} instead of a String from the API Key.`);

@@ -25,8 +25,6 @@ const credentials = { // Don't be like me, have these values in a protected file
 const VPS = new HostingBot.VPS(credentials);  
 const Statistics = VPS.getBandwidth(); // Returns a promise object
 console.log(Statistics); 
-// RETURNS:
-
 // {
 //   bandwidth: {
 //     limit: 4000,

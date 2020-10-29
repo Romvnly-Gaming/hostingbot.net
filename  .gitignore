@@ -1,1 +1,4 @@
-*.png
+#Got to try and make sure the example images aren't downloaded by the end user to save bandwidth.
+/*.png
+/images/*
+/images

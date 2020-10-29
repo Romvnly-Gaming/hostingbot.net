@@ -21,7 +21,7 @@ const credentials = { // Don't be like me, have these values in a protected file
       apiKey: "hostingbot-apiKey", // API Key from hostingbot.net
       apiPass: "hostingbot-apiPass", // API pass from hostingbot.net
       svs: 69 // Secure Virtual Server ID from hostingbot.net
-}
+};
 const VPS = new HostingBot.VPS(credentials);  
 const Statistics = VPS.getBandwidth(); // Returns a promise object
 console.log(Statistics); 

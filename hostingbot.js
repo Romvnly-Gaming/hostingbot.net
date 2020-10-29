@@ -1,20 +1,29 @@
-const baseUrl = "https://node2.hostingbot.net:4083/index.php" // Virtualizor's API, just hosted under 
+const baseUrl = "https://node2.hostingbot.net:4083/index.php" // Virtualizor's API, just hosted under Hostingbot's domain.
 
- const HostingBot = {
-  VPS: class VPS {
+/**
+ * The main hub for interacting with the HostingBot API, and the starting point for any interaction with the API.
+ */
+class Client {
     constructor(args) {
-      //Make sure those fuckers give the constructor args.
-      if (!args) throw new Error("No arguments provided. Please make sure you're following the tutorial.");
-      if (!args.apiKey) throw new Error("No API Key provided. Make sure it is a String.");
-      if (!args.apiPass) throw new Error("No API Pass provided. Make sure it is a String.");
-      if (!args.svs) throw new Error("No Virtual Private Server ID provided. Make sure it's a Integer/Number");
-      if (typeof args.apiKey !== "string") throw new TypeError(`Got a ${typeof args.apiKey} instead of a String from the API Key.`);
-      if (typeof args.apiPass !== "string") throw new TypeError(`Got a ${typeof args.apiPass} instead of a String from the API Pass.`);
-      if (args.cache && typeof args.cache !== "boolean") throw new TypeError(`Got a ${typeof args.cache} instead of a Boolean Value from the API Pass.`);
-      if (typeof args.svs !== "number") throw new TypeError(`Got a ${typeof args.svs} instead of a Number from the API Virtual Private Server ID.`);
-      if (args.cache) cache = args.cache
+            //Make sure those fuckers give the constructor args.
+            if (!args) throw new Error("No arguments provided. Please make sure you're following the tutorial.");
+            if (!args.apiKey) throw new Error("No API Key provided. Make sure it is a String.");
+            if (!args.apiPass) throw new Error("No API Pass provided. Make sure it is a String.");
+            if (typeof args.apiKey !== "string") throw new TypeError(`Got a ${typeof args.apiKey} instead of a String from the API Key.`);
+            if (typeof args.apiPass !== "string") throw new TypeError(`Got a ${typeof args.apiPass} instead of a String from the API Pass.`);
+            if (args.cache && typeof args.cache !== "boolean") throw new TypeError(`Got a ${typeof args.cache} instead of a Boolean Value from the API Cache Setting.`);
+            if (args.svs && typeof args.svs !== "number") throw new TypeError(`Got a ${typeof args.svs} instead of a Number from the API Virtual Private Server ID.`);
+            this.args = args;
+    }
+  }
+  /**
+ * Creates a new HostingBot VPS Thingy
+ * @extends {Client}
+ */
+class VPS extends Client {
+    constructor(args) {
+      super(args);
       this.name = 'HostingBot';
-      this.args = args;
 
       if (this.args.cache === true) { // Whether or not to do this function.
           fetch(`${baseUrl}?act=bandwidth&svs=${this.args.svs}&api=json&apikey=${this.args.apiKey}&apipass=${this.args.apiPass}`)
@@ -107,17 +116,15 @@ const baseUrl = "https://node2.hostingbot.net:4083/index.php" // Virtualizor's A
       }
     })
     }
-  },
-  Account: class Account {
+  }
+  /**
+ * Account API stuff from HostingBot's API.
+ * @extends {Client}
+ */
+class Account extends Client {
     constructor(args) {
-              //Make sure those fuckers give the constructor args.
-           if (!args) throw new Error("No arguments provided. Please make sure you're following the tutorial.");
-           if (!args.apiKey) throw new Error("No API Key provided. Make sure it is a String.");
-           if (!args.apiPass) throw new Error("No API Pass provided. Make sure it is a String.");
-           if (typeof args.apiKey !== "string") throw new TypeError(`Got a ${typeof args.apiKey} instead of a String from the API Key.`);
-           if (typeof args.apiPass !== "string") throw new TypeError(`Got a ${typeof args.apiPass} instead of a String from the API Pass.`);
+      super(args);
            this.name = 'HostingBot';
-           this.args = args;
     }
     getAccount() {
       return new Promise((resolve, reject) => {
@@ -137,10 +144,9 @@ const baseUrl = "https://node2.hostingbot.net:4083/index.php" // Virtualizor's A
     }
   }
   
- } 
+ 
 
 
 
 
-
-  module.exports = HostingBot;
+  module.exports = Client;

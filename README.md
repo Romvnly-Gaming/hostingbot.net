@@ -17,7 +17,11 @@ I've done my best to try and optimize this module for speed. Currently, the Host
 
 ```js
 const HostingBot = require("hostingbot.net"); // REQUIRE THE MODULE
-const VPS =  HostingBot.VPS // Object with functions.
+const VPS = new HostingBot.VPS({
+      apiKey: client.config["hostingbot-apiKey"], // API Key from hostingbot.net
+      apiPass: client.config["hostingbot-apiPass"], // API pass from hostingbot.net
+      svs: 56 // Secure Virtual Server ID from hostingbot.net
+  });  // Class with functions.
 const Statistics = VPS.getBandwidth() // Returns a promise object
 console.log(Statistics)
 ```

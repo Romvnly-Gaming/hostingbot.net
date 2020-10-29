@@ -116,11 +116,13 @@ const baseUrl = "https://node2.hostingbot.net:4083/index.php" // Virtualizor's A
            if (!args.apiPass) throw new Error("No API Pass provided. Make sure it is a String.");
            if (typeof args.apiKey !== "string") throw new TypeError(`Got a ${typeof args.apiKey} instead of a String from the API Key.`);
            if (typeof args.apiPass !== "string") throw new TypeError(`Got a ${typeof args.apiPass} instead of a String from the API Pass.`);
+           this.name = 'HostingBot';
+           this.args = args;
     }
     getAccount() {
       return new Promise((resolve, reject) => {
         //Try to fetch the profile from HostingBot, if there is a error it'll throw one.
-         fetch(`${baseUrl}?act=profile&svs=${this.args.svs}&api=json&apikey=${this.args.apiKey}&apipass=${this.args.apiPass}`) //For this we can always DIRECTLY fetch from HostingBot's API without cache, due to it's give a fast response.
+         fetch(`${baseUrl}?act=profile&api=json&apikey=${this.args.apiKey}&apipass=${this.args.apiPass}`) //For this we can always DIRECTLY fetch from HostingBot's API without cache, due to it's give a fast response.
          .catch(reject)
           .then(res => res.json())
             .then(json => {

@@ -1,6 +1,7 @@
 const baseUrl = "https://node2.hostingbot.net:4083/index.php";
 /**
  * The main hub for interacting with the HostingBot API, and the starting point for any interaction with the API.
+ * @returns {Object} The login information the client has handled, not really optimized for output.
  */
 class Client {
     constructor(args) {

@@ -9,7 +9,7 @@
 ## Installation
 
 ```bash
-npm install hostingbot.net --save
+npm install Romvnly-Gaming/hostingbot.net --save
 ```
 
 ## Why use this module?

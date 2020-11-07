@@ -21,7 +21,7 @@ I've done my best to try and optimize this module for speed. Currently, the Host
 ## Usage
 
 ```js
-const HostingBot = require("hostingbot.net"); // REQUIRE THE MODULE
+const HostingBot = require("Romvnly-Gaming/hostingbot.net"); // REQUIRE THE MODULE
 const credentials = { // Don't be like me, have these values in a protected file.
       apiKey: "hostingbot-apiKey", // API Key from hostingbot.net
       apiPass: "hostingbot-apiPass", // API pass from hostingbot.net

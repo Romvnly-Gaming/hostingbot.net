@@ -1,6 +1,6 @@
 {
   "name": "hostingbot.net",
-  "version": "1.2.0",
+  "version": "1.0.1",
   "description": "Unofficial module for handling API request with hostingbot.net, meant to be optimized for hostingbot.net using virtualizor.",
   "main": "hostingbot.js",
   "scripts": {

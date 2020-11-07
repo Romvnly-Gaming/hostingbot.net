@@ -1,5 +1,6 @@
 
 [![HostingBot Logo](https://github.com/Romvnly-Gaming/hostingbot.net/blob/main/images/hostingbot.png)](https://clients.hostingbot.net/aff.php?aff=8)
+<br />
 [![Module License](https://badgen.net/github/license/Romvnly-Gaming/hostingbot.net)](https://npmjs.com/hostingbot.net)
 [![Module Version](https://badge.fury.io/js/hostingbot.net.svg)](https://npmjs.com/hostingbot.net)
 

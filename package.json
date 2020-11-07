@@ -1,6 +1,6 @@
 {
   "name": "hostingbot.net",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Unofficial module for handling API request with hostingbot.net, meant to be optimized for hostingbot.net using virtualizor.",
   "main": "hostingbot.js",
   "scripts": {
@@ -10,7 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/Romvnly-Gaming/hostingbot.net.git"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "hostingbot.net",
     "hostingbot",
